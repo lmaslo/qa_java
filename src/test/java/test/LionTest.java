@@ -6,8 +6,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.junit.MockitoJUnitRunner;
-
 
 import java.util.List;
 
@@ -19,21 +17,20 @@ public class LionTest {
     private String sex;
     private boolean hasMane;
 
-    public LionTest(String sex, boolean hasMane){
-        this.sex=sex;
-        this.hasMane=hasMane;
+    public LionTest(String sex, boolean hasMane) {
+        this.sex = sex;
+        this.hasMane = hasMane;
     }
 
-    @Parameterized.Parameters(name="sex={0}, hasMane={1}")
-    public static Object[] dataSex(){
+    @Parameterized.Parameters(name = "sex={0}, hasMane={1}")
+    public static Object[] dataSex() {
         return new Object[][]{
-                {"Самец",true},
-                {"Самка",false},
+                {"Самец", true},
+                {"Самка", false},
         };
     }
 
     Feline feline = new Feline();
-
 
     @Test
     public void getKittensSetEmptyReturnOne() throws Exception {

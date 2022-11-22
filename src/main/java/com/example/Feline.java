@@ -23,5 +23,4 @@ public class Feline extends Animal implements Predator, IFeline {
     public int getKittens(int kittensCount) {
         return kittensCount;
     }
-
 }

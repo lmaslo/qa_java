@@ -1,18 +1,14 @@
 package test;
 
-import com.example.Cat;
 import com.example.Feline;
 import org.junit.Assert;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
 public class FelineTest {
-
-
     @Test
     public void getFamilyReturnFeline() {
         Feline feline = new Feline();
@@ -29,7 +25,6 @@ public class FelineTest {
         assertEquals(expected, actual);
     }
 
-
     @Test
     public void getKittensSetCountReturnCount() {
         Feline feline = new Feline();
@@ -39,7 +34,6 @@ public class FelineTest {
         assertEquals(expected, actual);
     }
 
-
     @Test
     public void eatMeat() throws Exception {
         Feline feline = new Feline();
@@ -47,5 +41,4 @@ public class FelineTest {
         List<String> actualFood = feline.eatMeat();
         Assert.assertEquals(expectedFood, actualFood);
     }
-
 }
